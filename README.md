@@ -33,6 +33,7 @@ To run this project locally, follow these steps:
 git clone https://github.com/MrAkshay143/salescalculator.git
 cd salescalculator
 # Open index.html in your preferred browser
+```
 
 ## 👨‍💻 Author
 

@@ -1,4 +1,4 @@
-function calculate() {
+ function calculate() {
             const saleWeight = parseFloat(document.getElementById('sale-weight').value);
             const saleRate = parseFloat(document.getElementById('sale-rate').value);
             const collectionValue = parseFloat(document.getElementById('collection-value').value);

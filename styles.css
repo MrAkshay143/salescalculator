@@ -1,172 +1,303 @@
+/* Existing CSS styles */
+
 body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
 
-        .calculator-container {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 80%;
-            max-width: 400px;
-            animation: fadeInUp 0.6s ease-in-out;
-        }
+.calculator-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 80%;
+    max-width: 400px;
+    animation: fadeInUp 0.6s ease-in-out;
+    position: relative; /* Added for desktop view */
+}
 
-        .logo {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        .logo img {
-            max-width: 100px;
-            height: auto;
-        }
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
 
-        .input-field {
-            position: relative;
-            margin-bottom: 20px;
-            animation: fadeIn 0.6s ease-in-out;
-        }
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+    animation: fadeIn 0.6s ease-in-out;
+}
 
-        .input-field label {
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            font-size: 12px;
-            color: #999;
-            transition: all 0.3s ease-in-out;
-        }
+.input-field label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #999;
+    transition: all 0.3s ease-in-out;
+}
 
-        .input-field input:not(:placeholder-shown) + label {
-            top: -30px;
-            font-size: 10px;
-            color: #333;
-        }
+.input-field input:not(:placeholder-shown)+label {
+    top: -30px;
+    font-size: 10px;
+    color: #333;
+}
 
-        .btn-container {
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-        }
+.btn-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
 
-        .btn-container label {
-            font-size: 12px;
-            color: #666;
-            margin-right: 10px;
-        }
+.btn-container label {
+    font-size: 12px;
+    color: #666;
+    margin-right: 10px;
+}
 
-        .btn {
-            background-color: #007bff;
-            border-radius: 4px;
-            padding: 3px 8px;
-            font-size: 12px;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
+.btn {
+    background-color: #007bff;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
 
-        .btn:hover {
-            background-color: #0056b3;
-        }
+.btn:hover {
+    background-color: #0056b3;
+}
 
-        .result {
-            display: none;
-            margin-top: 20px;
-            animation: fadeIn 0.6s ease-in-out;
-        }
+.result {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 0.6s ease-in-out;
+}
 
-        @media (max-width: 600px) {
-            .calculator-container {
-                padding: 20px;
-            }
-        }
+@media (max-width: 600px) {
+    .calculator-container {
+        padding: 20px;
+    }
+}
 
-        .result p {
-            margin: 5px 0;
-            font-size: 14px;
-        }
+.result p {
+    margin: 5px 0;
+    font-size: 14px;
+}
 
-        /* Custom styling for collection input */
-        .collection-field {
-            display: none;
-        }
+/* Custom styling for collection input */
+.collection-field {
+    display: none;
+}
 
-        .collection-field label {
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            font-size: 12px;
-            color: #999;
-            transition: all 0.3s ease-in-out;
-        }
+.collection-field label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #999;
+    transition: all 0.3s ease-in-out;
+}
 
-        .collection-field input:not(:placeholder-shown) + label {
-            top: -30px;
-            font-size: 10px;
-            color: #333;
-        }
+.collection-field input:not(:placeholder-shown)+label {
+    top: -30px;
+    font-size: 10px;
+    color: #333;
+}
 
-        /* Styling for result */
-        .result p.excess {
-            color: #2ecc71; /* Green color for excess collection */
-        }
+/* Styling for result */
+.result p.excess {
+    color: #2ecc71;
+    /* Green color for excess collection */
+}
 
-        .result p.due {
-            color: #e74c3c; /* Red color for due amount */
-        }
+.result p.due {
+    color: #e74c3c;
+    /* Red color for due amount */
+}
 
-        /* On/Off switch styling */
-        .onoff-switch {
-            position: relative;
-            display: inline-block;
-            width: 40px;
-            height: 18px;
-            background-color: #ccc;
-            border-radius: 10px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
+/* On/Off switch styling */
+.onoff-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 18px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
 
-        .onoff-switch .switch-handle {
-            position: absolute;
-            width: 14px;
-            height: 14px;
-            background-color: white;
-            border-radius: 50%;
-            left: 1px;
-            top: 1px;
-            transition: left 0.3s ease-in-out;
-        }
+.onoff-switch .switch-handle {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    left: 1px;
+    top: 1px;
+    transition: left 0.3s ease-in-out;
+}
 
-        .onoff-switch.active .switch-handle {
-            left: 25px;
-        }
+.onoff-switch.active .switch-handle {
+    left: 25px;
+}
 
-        /* Styling for toggle labels */
-        .toggle-label {
-            font-size: 12px;
-            color: #666;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
+/* Styling for toggle labels */
+.toggle-label {
+    font-size: 12px;
+    color: #666;
+    margin-right: 10px;
+    vertical-align: middle;
+}
 
-        /* Styling for completed message */
-        .result p.completed {
-            color: #2ecc71; /* Green color for completed message */
-        }
-		/* Add this to your existing CSS styles */
+/* Styling for completed message */
+.result p.completed {
+    color: #2ecc71;
+    /* Green color for completed message */
+}
+
+/* Add this to your existing CSS styles */
 
 .btn.share-btn {
-    background-color: #28a745; /* Green color for the button */
+    background-color: #28a745;
+    /* Green color for the button */
     margin-left: 10px;
 }
 
 .btn.share-btn:hover {
-    background-color: #218838; /* Darker green color on hover */
+    background-color: #218838;
+    /* Darker green color on hover */
+}
+
+/* Add this to your existing CSS styles */
+
+/* Styling for the history container */
+.history-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(77, 103, 219, 0.679);
+    /* Semi-transparent black background */
+    z-index: 9999;
+    overflow-y: scroll;
+    /* Add a vertical scroll bar when needed */
+}
+
+/* Styling for the history content */
+.calculation-item {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculation-item p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.calculation-item b {
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+/* Button to close the history view */
+.close-history-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-history-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 600px) {
+    .history-container {
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+/* Media query for desktop responsiveness */
+@media (min-width: 601px) {
+    .history-container {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(77, 103, 219, 0.679);
+        /* Semi-transparent black background */
+        z-index: 9999;
+        overflow-y: scroll;
+        /* Add a vertical scroll bar when needed */
+    }
+
+    .calculator-container {
+        position: relative;
+    }
+}
+
+.btn.save-btn {
+    background-color: #ffc107;
+    /* Yellow color for the button */
+    margin-left: 10px;
+}
+
+.btn.save-btn:hover {
+    background-color: #ffca2c;
+    /* Darker yellow color on hover */
+}
+
+/* Updated styles for the "Clear History" button */
+#clear-history-btn {
+    background-color: #dc3545; /* Red color for the button */
+    color: #fff;
+    margin-left: 10px;
+}
+
+#clear-history-btn:hover {
+    background-color: #c82333; /* Darker red color on hover */
+}
+
+/* Updated styles for the "History" button */
+#history-btn {
+    background-color: #6f42c1; /* Purple color for the button */
+    color: #fff;
+    margin-left: 10px;
+}
+
+#history-btn:hover {
+    background-color: #5a3e95; /* Darker purple color on hover */
 }

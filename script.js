@@ -198,8 +198,6 @@ window.addEventListener('load', () => {
     updateHistoryButtons();
 });
 
-// Existing event listeners and functions below...
-
 // Event listener for the "Calculate" button
 document.querySelector('.btn.calculate-btn').addEventListener('click', calculate);
 
@@ -218,10 +216,6 @@ document.getElementById('history-btn').addEventListener('click', showHistory);
 // Event listener for the "Clear History" button
 document.getElementById('clear-history-btn').addEventListener('click', clearHistory);
 
-// Event listener for the "Hide History" button
-//document.getElementById('hide-history-btn').addEventListener('click', hideHistory);
-
-// Other existing event listeners and functions...
 const inputFields = document.querySelectorAll('.input-field input');
 inputFields.forEach(input => {
     input.addEventListener('input', calculate);

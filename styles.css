@@ -1,5 +1,3 @@
-/* Existing CSS styles */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -167,8 +165,6 @@ body {
     /* Green color for completed message */
 }
 
-/* Add this to your existing CSS styles */
-
 .btn.share-btn {
     background-color: #28a745;
     /* Green color for the button */
@@ -179,8 +175,6 @@ body {
     background-color: #218838;
     /* Darker green color on hover */
 }
-
-/* Add this to your existing CSS styles */
 
 /* Styling for the history container */
 .history-container {
